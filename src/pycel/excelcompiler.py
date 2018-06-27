@@ -622,7 +622,7 @@ class ExcelCompiler(object):
         G = nx.DiGraph()
 
         # match the info in cellmap
-        for c in cellmap.itervalues(): self.add_node_to_graph(G, c)
+        for c in cellmap.values(): self.add_node_to_graph(G, c)
 
         while todo:
             c1 = todo.pop()
