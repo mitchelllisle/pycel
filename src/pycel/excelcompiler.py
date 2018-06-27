@@ -21,11 +21,9 @@ import pickle
 import logging
 import networkx as nx
 
-
 __version__ = filter(str.isdigit, "$Revision: 2524 $")
 __date__ = filter(str.isdigit, "$Date: 2011-09-06 17:05:00 +0100 (Tue, 06 Sep 2011) $")
 __author__ = filter(str.isdigit, "$Author: dg2d09 $")
-
 
 class Spreadsheet(object):
     def __init__(self,G,cellmap):
@@ -37,13 +35,13 @@ class Spreadsheet(object):
     @staticmethod
     def load_from_file(fname):
         f = open(fname,'rb')
-        obj = cPickle.load(f)
+        obj = pickle.load(f)
         #obj = load(f)
         return obj
 
     def save_to_file(self,fname):
         f = open(fname,'wb')
-        cPickle.dump(self, f, protocol=2)
+        pickle.dump(self, f, protocol=2)
         f.close()
 
     def export_to_dot(self,fname):
