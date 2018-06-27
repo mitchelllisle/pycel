@@ -1,5 +1,8 @@
 from setuptools import Command, setup, find_packages
 
+# see StackOverflow/458550
+exec(open('src/pycel/version.py').read())
+
 setup(name='Pycel',
       version=__version__,
       packages=find_packages('src'),
