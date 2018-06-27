@@ -9,10 +9,6 @@ except:
     print("Can\'t import win32com -> switch from Com to Openpyxl wrapping implementation")
     from pycel.excelwrapper import ExcelOpxWrapper as ExcelWrapperImpl
 
-
-import os
-
-
 from pycel.excellib import *
 from pycel.excelutil import *
 from math import *
