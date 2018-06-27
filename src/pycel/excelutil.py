@@ -1,5 +1,8 @@
 from __future__ import division
-from itertools import izip
+try:
+    from itertools import izip
+except ImportError:
+    izip = zip
 import collections
 import functools
 import re

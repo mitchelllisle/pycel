@@ -1,8 +1,5 @@
 from setuptools import Command, setup, find_packages
 
-# see StackOverflow/458550
-exec(open('src/pycel/version.py').read())
-
 setup(name='Pycel',
       version=__version__,
       packages=find_packages('src'),
@@ -11,7 +8,7 @@ setup(name='Pycel',
       url = 'https://github.com/dgorissen/pycel',
       tests_require = ['nose >= 1.2'],
       test_suite='nose.collector',
-      install_requires = ['networkx', 
+      install_requires = ['networkx',
                           'openpyxl'
                           ],
       author='Dirk Gorissen',
@@ -25,4 +22,3 @@ Pycel is a small python library that can translate an Excel spreadsheet into exe
         'License ::  OSI Approved ',
         ]
       )
-
