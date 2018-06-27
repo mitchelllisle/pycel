@@ -9,7 +9,7 @@ except:
     print("Can\'t import win32com -> switch from Com to Openpyxl wrapping implementation")
     from pycel.excelwrapper import ExcelOpxWrapper as ExcelWrapperImpl
 
-from pycel.excellib import * as excellib
+import pycel.excellib as excellib
 from pycel.excelutil import *
 from math import *
 from networkx.classes.digraph import DiGraph
