@@ -578,7 +578,7 @@ class ExcelCompiler(object):
             code = root.emit(ast,context=Context(cell,self.excel))
         else:
             ast = None
-            code = str('"' + cell.value + '"' if isinstance(cell.value,unicode) else cell.value)
+            code = str('"' + cell.value + '"' if type(cell.value) == str else cell.value)
 
         return code,ast
 
